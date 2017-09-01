@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    tools:context="com.shibuyaxpress.electrotecniatecsup.MenuOhmActivity"
+    android:gravity="top|center_horizontal"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout2">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ley de ohm"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="32dp"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textColor="#2ea4da"
+            android:id="@+id/textView2"
+            android:textAllCaps="false" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué desea hallar?"
+            android:fontFamily="cursive"
+            android:id="@+id/textView3"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+            android:src="@drawable/vol1"
+            android:id="@+id/voltio"
+            android:layout_marginTop="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="129dp"
+                android:layout_height="100dp"
+                android:src="@drawable/re1"
+                android:id="@+id/ohnio"
+                android:layout_gravity="end"
+                android:layout_marginLeft="88dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="100dp"
+                android:src="@drawable/an1"
+                android:id="@+id/amper"
+                android:layout_gravity="right"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/ohnio" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Datos experimentales"
+        android:gravity="center"
+        android:id="@+id/btnexperimental"
+        android:textSize="16dp"
+        android:background="#ab55bf2e"
+        android:layout_marginTop="66dp"
+        android:maxEms="16"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/datos"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:onClick="Experimental" />
+
+
+</RelativeLayout>

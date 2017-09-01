@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#fff"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.shibuyaxpress.electrotecniatecsup.VoltiosActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:text="Voltios"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textSize="34dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_below="@+id/textInputLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Amperios (I)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:id="@+id/textView10"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/txtA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/textView12"
+                    android:layout_weight="1"
+                    android:text="Ohmios (R)" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/txtB" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="299dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/equal"
+                android:id="@+id/btnCalcular"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#d44c4c"
+                android:text="CALCULAR"
+                android:onClick="Calcula"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Resultado "
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/textView13"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/txtC"
+                    android:textStyle="normal|bold"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+            <Button
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:id="@+id/btnAddX"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#d44c4c"
+                android:text="Agrega X"
+                android:onClick="AgregaX"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/grafi2"
+                android:gravity="center"
+                android:layout_below="@+id/btnGrafico"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/btnGrafico" />
+
+            <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:id="@+id/btnAddY"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#d44c4c"
+        android:text="Agrega Y"
+        android:drawableLeft="@drawable/grafi2"
+        android:onClick="AgregaY"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@+id/btnLimpia"
+        android:layout_alignStart="@+id/btnLimpia"
+        android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/glasses"
+                android:drawablePadding="8dp"
+                android:id="@+id/btnGrafico"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#d44c4c"
+                android:text="ver grafico"
+                android:onClick="pass"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignStart="@+id/linearLayout" />
+            <Button
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/eraser"
+                android:id="@+id/btnLimpia"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#d44c4c"
+                android:text="Limpiar Datos"
+                android:onClick="Limpiar"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_alignBaseline="@+id/btnGrafico"
+                android:layout_alignBottom="@+id/btnGrafico"
+                android:layout_alignParentEnd="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

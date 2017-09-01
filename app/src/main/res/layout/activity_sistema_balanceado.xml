@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shibuyaxpress.electrotecniatecsup.SistemaBalanceadoActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Sistema balanceado"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textSize="29dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_below="@+id/textInputLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Voltios (V)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:id="@+id/textView10"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number|numberSigned|numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/txtVolt" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/textView12"
+                        android:layout_weight="1"
+                        android:text="Impedancia (Z)" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number|numberSigned|numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/txtImp" />
+                </LinearLayout>
+                <Button
+                    android:layout_width="322dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:drawableLeft="@drawable/equal"
+                    android:id="@+id/btnCalcular2"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#41ca83"
+                    android:text="CALCULAR"
+                    android:onClick="Calcular"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Intensidad 1 "
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/textView13"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/txtInt1"
+                        android:textStyle="normal|bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Intensidad 2 "
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/textView14"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/txtInt2"
+                        android:textStyle="normal|bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Intensidad 3 "
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/textView15"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/txtInt3"
+                        android:textStyle="normal|bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:id="@+id/btnAddX"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#41ca83"
+                android:text="Agrega X"
+                android:onClick="agregaX"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/grafi2"
+                android:gravity="center"
+                android:layout_below="@+id/btnGrafico"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/btnGrafico" />
+
+            <Button
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:id="@+id/btnAddY"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#41ca83"
+                android:text="Agrega Y"
+                android:drawableLeft="@drawable/grafi2"
+                android:onClick="agregaY"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_below="@+id/btnLimpia"
+                android:layout_alignStart="@+id/btnLimpia"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/glasses"
+                android:id="@+id/btnGrafico"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#41ca83"
+                android:text="ver grafico"
+                android:onClick="pass"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignStart="@+id/linearLayout" />
+
+            <Button
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/eraser"
+                android:id="@+id/btnLimpia"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#41ca83"
+                android:text="Limpiar Datos"
+                android:onClick="Limpiar"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_alignBaseline="@+id/btnGrafico"
+                android:layout_alignBottom="@+id/btnGrafico"
+                android:layout_alignParentEnd="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
