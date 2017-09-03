@@ -24,10 +24,10 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
     //se pasaran dos arraylist con los puntos de los ejes
     ArrayList<Double> puntosX1= new ArrayList<>();
     ArrayList<Double> puntosX2=new ArrayList<>();
-    ArrayList<Double> puntosX3=new ArrayList<>();
+    //ArrayList<Double> puntosX3=new ArrayList<>();
     ArrayList<Double> puntosY1=new ArrayList<>();
     ArrayList<Double> puntosY2=new ArrayList<>();
-    ArrayList<Double> puntosY3=new ArrayList<>();
+    //ArrayList<Double> puntosY3=new ArrayList<>();
     //el contador vera si hay la misma cantidad de puntos por eje para evitar problemas
     int contadorX=0,contadorY=0;
     int sample=2;
@@ -38,27 +38,27 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         editV1=(EditText)findViewById(R.id.editV1);
         editV2=(EditText)findViewById(R.id.editV2);
-        editV3=(EditText)findViewById(R.id.editV3);
+        //editV3=(EditText)findViewById(R.id.editV3);
 
         editI1=(EditText)findViewById(R.id.editI1);
         editI2=(EditText)findViewById(R.id.editI2);
-        editI3=(EditText)findViewById(R.id.editI3);
+        //editI3=(EditText)findViewById(R.id.editI3);
 
         btnAgregaX1=(Button)findViewById(R.id.btnX1);
         btnAgregaX2=(Button)findViewById(R.id.btnX2);
-        btnAgregaX3=(Button)findViewById(R.id.btnX3);
+        //btnAgregaX3=(Button)findViewById(R.id.btnX3);
 
         btnAgregaY1=(Button)findViewById(R.id.btnY1);
         btnAgregaY2=(Button)findViewById(R.id.btnY2);
-        btnAgregaY3=(Button)findViewById(R.id.btnY3);
+        //btnAgregaY3=(Button)findViewById(R.id.btnY3);
 
         btnLimpia1=(Button)findViewById(R.id.btnLimpiar1);
         btnLimpia2=(Button)findViewById(R.id.btnlimpiar2);
-        btnLimpia3=(Button)findViewById(R.id.btnlimpiar3);
+        //btnLimpia3=(Button)findViewById(R.id.btnlimpiar3);
 
         btnGrafico1=(Button)findViewById(R.id.btngrafico1);
         btnGrafico2=(Button)findViewById(R.id.btngrafico2);
-        btnGrafico3=(Button)findViewById(R.id.btngrafico3);
+        //btnGrafico3=(Button)findViewById(R.id.btngrafico3);
 
 
         tabs=(TabHost) findViewById(R.id.tabhost);
@@ -72,11 +72,6 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         spec=tabs.newTabSpec("Nagisa tab");
         spec.setContent(R.id.tab2);
         spec.setIndicator("I vs R");
-        tabs.addTab(spec);
-
-        spec=tabs.newTabSpec("Riko tab");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("V vs R");
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
@@ -137,7 +132,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         }
     }
 
-    public void AgregaX3(View view){
+    /*public void AgregaX3(View view){
         try {
             puntosX3.add(Double.parseDouble(editV3.getText().toString()));
             //contadorX++;
@@ -146,9 +141,9 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         }
 
-    }
+    }*/
 
-    public void AgregaY3(View view){
+   /* public void AgregaY3(View view){
         try {
             puntosY3.add(Double.parseDouble(editI3.getText().toString()));
             //contadorY++;
@@ -157,7 +152,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         }catch (Exception e1){
 
         }
-    }
+    }*/
 
     public void LimpiarXY(View view){
         try {
@@ -167,8 +162,8 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             puntosY2.clear();
             puntosX2.clear();
 
-            puntosY3.clear();
-            puntosX3.clear();
+            //puntosY3.clear();
+           // puntosX3.clear();
             editV1.setText(" ");
             editI1.setText(" ");
             Toast.makeText(getApplicationContext(), "Se han eliminado los parametros de la gráfica", Toast.LENGTH_SHORT).show();
@@ -213,7 +208,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         }
     }
 
-    public void pass3(View view){
+   /* public void pass3(View view){
         if(puntosX3.size()==puntosY3.size()) {
             Intent act = new Intent();
             sample=2;
@@ -229,7 +224,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"no se puede iniciar por tener una cantidad de puntos desiguales", Toast.LENGTH_SHORT).show();
 
         }
-    }
+    }*/
 
 
 }
