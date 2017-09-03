@@ -36,27 +36,27 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         editV1=(EditText)findViewById(R.id.editV1);
         editV2=(EditText)findViewById(R.id.editV2);
-        editV3=(EditText)findViewById(R.id.editV3);
+        //editV3=(EditText)findViewById(R.id.editV3);
 
         editI1=(EditText)findViewById(R.id.editI1);
         editI2=(EditText)findViewById(R.id.editI2);
-        editI3=(EditText)findViewById(R.id.editI3);
+        //editI3=(EditText)findViewById(R.id.editI3);
 
         btnAgregaX1=(Button)findViewById(R.id.btnX1);
         btnAgregaX2=(Button)findViewById(R.id.btnX2);
-        btnAgregaX3=(Button)findViewById(R.id.btnX3);
+        //btnAgregaX3=(Button)findViewById(R.id.btnX3);
 
         btnAgregaY1=(Button)findViewById(R.id.btnY1);
         btnAgregaY2=(Button)findViewById(R.id.btnY2);
-        btnAgregaY3=(Button)findViewById(R.id.btnY3);
+       // btnAgregaY3=(Button)findViewById(R.id.btnY3);
 
         btnLimpia1=(Button)findViewById(R.id.btnLimpiar1);
         btnLimpia2=(Button)findViewById(R.id.btnlimpiar2);
-        btnLimpia3=(Button)findViewById(R.id.btnlimpiar3);
+       // btnLimpia3=(Button)findViewById(R.id.btnlimpiar3);
 
         btnGrafico1=(Button)findViewById(R.id.btngrafico1);
         btnGrafico2=(Button)findViewById(R.id.btngrafico2);
-        btnGrafico3=(Button)findViewById(R.id.btngrafico3);
+        //btnGrafico3=(Button)findViewById(R.id.btngrafico3);
 
 
         tabs=(TabHost) findViewById(R.id.tabhost);
@@ -67,14 +67,9 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         spec.setIndicator("I vs V");
         tabs.addTab(spec);
 
-        spec=tabs.newTabSpec("Nagisa tab");
+        spec=tabs.newTabSpec("tab 2");
         spec.setContent(R.id.tab2);
         spec.setIndicator("I vs R");
-        tabs.addTab(spec);
-
-        spec=tabs.newTabSpec("Riko tab");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("V vs R");
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
