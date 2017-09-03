@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,10 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
     EditText editV3,editV2,editV1,editI1,editI2,editI3;
      Button btnAgregaX1,btnAgregaX2,btnAgregaX3, btnAgregaY1,btnAgregaY2,btnAgregaY3, btnLimpia1,btnLimpia2,btnLimpia3;
     Button btnGrafico1,btnGrafico2,btnGrafico3;
+    TableLayout tabla1,tabla2;
+    TextView puntos1,puntos2;
+    TableRow tableRow;
+
     double x,y,z;
 
 
@@ -36,6 +43,12 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos_exp);
 
+        tabla1=(TableLayout)findViewById(R.id.tabla_1);
+
+        tabla1.setColumnStretchable(0,true);
+        tabla1.setColumnStretchable(1,true);
+
+        /////////////////////////////////
         editV1=(EditText)findViewById(R.id.editV1);
         editV2=(EditText)findViewById(R.id.editV2);
         //editV3=(EditText)findViewById(R.id.editV3);
@@ -105,6 +118,27 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             //contadorY++;
             Toast.makeText(getApplicationContext(), String.valueOf(puntosY1.size())+"° punto añadido", Toast.LENGTH_SHORT).show();
 
+            tableRow=new TableRow(this);
+            puntos1=new TextView(this);
+            puntos2=new TextView(this);
+
+            puntos1.setText(String.valueOf(puntosX1.get(contadorX)));
+            puntos1.setTextSize(15);
+            puntos1.setGravity(Gravity.CENTER);
+
+            puntos2.setText(String.valueOf(puntosY1.get(contadorY)));
+            puntos2.setTextSize(15);
+            puntos2.setGravity(Gravity.CENTER);
+
+            tableRow.addView(puntos1);
+            tableRow.addView(puntos2);
+
+            tabla1.addView(tableRow);
+
+            contadorX+=1;
+            contadorY+=1;
+            editV1.setText("");
+            editI1.setText("");
         }catch (Exception e1){
 
         }
@@ -132,27 +166,6 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         }
     }
 
-    /*public void AgregaX3(View view){
-        try {
-            puntosX3.add(Double.parseDouble(editV3.getText().toString()));
-            //contadorX++;
-            Toast.makeText(getApplicationContext(), String.valueOf(puntosX3.size())+"° punto añadido", Toast.LENGTH_SHORT).show();
-        }catch (Exception e1){
-
-        }
-
-    }*/
-
-   /* public void AgregaY3(View view){
-        try {
-            puntosY3.add(Double.parseDouble(editI3.getText().toString()));
-            //contadorY++;
-            Toast.makeText(getApplicationContext(), String.valueOf(puntosY3.size())+"° punto añadido", Toast.LENGTH_SHORT).show();
-
-        }catch (Exception e1){
-
-        }
-    }*/
 
     public void LimpiarXY(View view){
         try {
@@ -166,6 +179,11 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
            // puntosX3.clear();
             editV1.setText(" ");
             editI1.setText(" ");
+
+            int childCount = tabla1.getChildCount();
+
+            // Remove all rows except the first one
+                tabla1.removeViews(0,childCount);
             Toast.makeText(getApplicationContext(), "Se han eliminado los parametros de la gráfica", Toast.LENGTH_SHORT).show();
         }catch(Exception e1){
 
@@ -207,24 +225,5 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         }
     }
-
-   /* public void pass3(View view){
-        if(puntosX3.size()==puntosY3.size()) {
-            Intent act = new Intent();
-            sample=2;
-            act.setClass(getApplicationContext(), GraficoActivity.class);
-            act.putExtra("listaX",puntosX3);
-            act.putExtra("listaY",puntosY3);
-            act.putExtra("sample",sample);
-            //Toast.makeText(getApplicationContext(),puntosX.size()+"   "+puntosY.size(),Toast.LENGTH_SHORT).show();
-            startActivity(act);
-
-        }
-        else{
-            Toast.makeText(getApplicationContext(),"no se puede iniciar por tener una cantidad de puntos desiguales", Toast.LENGTH_SHORT).show();
-
-        }
-    }*/
-
 
 }
