@@ -1,12 +1,14 @@
 package com.shibuyaxpress.electrotecniatecsup;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -78,6 +80,13 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
+
+        int titleColor = Color.WHITE; //<-- change this to the color you want the title text to be
+        for(int i = 0;i < tabs.getTabWidget().getChildCount(); i++)
+        {
+            TextView textView = (TextView)tabs.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            textView.setTextColor(titleColor);
+        }
 
 
 

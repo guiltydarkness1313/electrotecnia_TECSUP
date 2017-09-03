@@ -31,4 +31,7 @@
     <style name="Theme">Theme</style>
 
     <style name="ThemeOverlay">ThemeOverlay</style>
+
+    <style name="TabText">
+        <item name="android:textColor">#ffffff</item> </style>
 </resources>
