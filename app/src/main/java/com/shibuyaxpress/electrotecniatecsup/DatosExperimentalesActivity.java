@@ -203,24 +203,4 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         }
     }
-
-    public void pass3(View view){
-        if(puntosX3.size()==puntosY3.size()) {
-            Intent act = new Intent();
-            sample=2;
-            act.setClass(getApplicationContext(), GraficoActivity.class);
-            act.putExtra("listaX",puntosX3);
-            act.putExtra("listaY",puntosY3);
-            act.putExtra("sample",sample);
-            //Toast.makeText(getApplicationContext(),puntosX.size()+"   "+puntosY.size(),Toast.LENGTH_SHORT).show();
-            startActivity(act);
-
-        }
-        else{
-            Toast.makeText(getApplicationContext(),"no se puede iniciar por tener una cantidad de puntos desiguales", Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
-
 }
