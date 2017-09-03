@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#3c3d3d"
+            android:textStyle="bold"
+            android:text="Cálculo de Amperios"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_margin="16dp"
+                android:id="@+id/tenAmper"
+                android:drawableRight="@drawable/voltage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tension"
+                android:drawablePadding="12dp"
+                android:inputType="number" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/resisAmper"
+                android:inputType="number"
+                android:hint="Resistencia"/>
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        <Button
+            android:id="@+id/calAmper"
+            android:layout_margin="15dp"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_button_cal"
+            android:drawableLeft="@drawable/equal"
+            android:drawablePadding="8dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            />
+            <Button
+                android:id="@+id/borrarAmper"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_button_cal"
+                android:drawableLeft="@drawable/eraser"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CE"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Resultado"
+                android:textStyle="normal"
+                android:textColor="#000"
+                android:inputType="number"
+                android:enabled="false"
+                android:drawableRight="@drawable/resistance"
+                android:id="@+id/resAmper"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,23 +1,29 @@
 <resources>
-    <string name="app_name">Electro Tux</string>
+    <string name="app_name">Electro Calc</string>
     <string name="fundir">fundir</string>
     <string name="des">fundir</string>
     <string name="Electrotécnia">titulo</string>
     <string name="about">About</string>
     <string name="title_activity_scrolling">Electro Calc</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Nosotros</string>
     <string name="linder">Linder Hassinger</string>
     <string name="paul">Paul Pacheco</string>
     <string name="victor">Victor Saico</string>
     <string name="txt_about_us">Acerca de nosotros</string>
-    <string name="txt_info_team">\nShibuyaXpress es un grupo de desarrolladores novatos de TECSUP
+    <string name="txt_info_team">\nShibuyaXpress es un grupo de desarrolladores de TECSUP
         dedicados a la programación Web, Movil y otras áreas.\n\n Nuestro grupo se compone de 3
         integrantes:\n-  Paul Pacheco\n- Linder Hassinger \n- Victor Saico\n\nEspero
-        que les agrade nuestra primera aplicación desarrollada bajo Android (proximamente IOS) y
+        que les agrade nuestra aplicación desarrollada bajo Android y
         nos apoyen con comentarios positivos para seguir desarrollando mas aplicaciones que faciliten
         la vida del usuario.\n\n
         Agradecemos a TECSUP por darnos las herramientas necesarias para poder realizar este tipo de contenido
         y estar formandonos como profesionales y personas de bien.\n\n
         Atte.\n
-El equipo de ShibuyaXpress</string>
+        El equipo de ShibuyaXpress \n \n
+        Contactos: \n
+        linder.hassinger@tecsup.edu.pe \n
+        paul.pacheco@tecsup.edu.pe \n
+        victor.saico@tecsup.edu.pe \n
+
+    </string>
 </resources>

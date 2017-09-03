@@ -1,5 +1,6 @@
 package com.shibuyaxpress.electrotecniatecsup;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -69,4 +70,5 @@ public class MenuOhmActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuOhmActivity.this,ScrollingActivity.class);
         startActivity(intent);
     }
+
 }
