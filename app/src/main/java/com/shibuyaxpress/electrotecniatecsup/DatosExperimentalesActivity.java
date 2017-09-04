@@ -18,12 +18,10 @@ import java.util.ArrayList;
 
 public class DatosExperimentalesActivity extends AppCompatActivity {
     TabHost tabs;
-    EditText editV3,editV2,editV1,editI1,editI2,editI3;
-     Button btnAgregaX1,btnAgregaX2,btnAgregaX3, btnAgregaY1,btnAgregaY2,btnAgregaY3, btnLimpia1,btnLimpia2,btnLimpia3;
-    Button btnGrafico1,btnGrafico2,btnGrafico3;
-    TableLayout tabla1,tabla2;
+    EditText editV2,editV1,editI1,editI2;
+     Button btnAgregaX1,btnAgregaX2, btnAgregaY1,btnAgregaY2,btnLimpia1,btnLimpia2;
+    Button btnGrafico1,btnGrafico2;
     TextView puntos1,puntos2;
-    TableRow tableRow;
 
     double x,y,z;
 
@@ -43,10 +41,8 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos_exp);
 
-        tabla1=(TableLayout)findViewById(R.id.tabla_1);
+        //tabla1=(TableLayout)findViewById(R.id.tabla_1);
 
-        tabla1.setColumnStretchable(0,true);
-        tabla1.setColumnStretchable(1,true);
 
         /////////////////////////////////
         editV1=(EditText)findViewById(R.id.editV1);
@@ -95,10 +91,6 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             TextView textView = (TextView)tabs.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
             textView.setTextColor(titleColor);
         }
-
-
-
-
     }
 
     public void AgregaX1(View view){
@@ -118,9 +110,12 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             //contadorY++;
             Toast.makeText(getApplicationContext(), String.valueOf(puntosY1.size())+"° punto añadido", Toast.LENGTH_SHORT).show();
 
-            tableRow=new TableRow(this);
-            puntos1=new TextView(this);
-            puntos2=new TextView(this);
+            TableLayout tabla=(TableLayout)findViewById(R.id.tabla_1);
+            tabla.setColumnStretchable(0,true);
+            tabla.setColumnStretchable(1,true);
+            TableRow tableRow=new TableRow(DatosExperimentalesActivity.this);
+            puntos1=new TextView(DatosExperimentalesActivity.this);
+            puntos2=new TextView(DatosExperimentalesActivity.this);
 
             puntos1.setText(String.valueOf(puntosX1.get(contadorX)));
             puntos1.setTextSize(15);
@@ -130,10 +125,13 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             puntos2.setTextSize(15);
             puntos2.setGravity(Gravity.CENTER);
 
+            TableRow.LayoutParams lp=new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+            tableRow.setLayoutParams(lp);
+
             tableRow.addView(puntos1);
             tableRow.addView(puntos2);
 
-            tabla1.addView(tableRow);
+            tabla.addView(tableRow);
 
             contadorX+=1;
             contadorY+=1;
@@ -175,15 +173,12 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
             puntosY2.clear();
             puntosX2.clear();
 
-            //puntosY3.clear();
-           // puntosX3.clear();
             editV1.setText(" ");
             editI1.setText(" ");
 
-            int childCount = tabla1.getChildCount();
+            TableLayout tabla=(TableLayout)findViewById(R.id.tabla_1);
+            tabla.removeAllViews();
 
-            // Remove all rows except the first one
-                tabla1.removeViews(0,childCount);
             Toast.makeText(getApplicationContext(), "Se han eliminado los parametros de la gráfica", Toast.LENGTH_SHORT).show();
         }catch(Exception e1){
 
