@@ -24,6 +24,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
     Button btnGrafico1,btnGrafico2,btnGrafico3;
     TableLayout tabla1,tabla2;
     TextView puntos1,puntos2;
+    TextView ptosX2,ptosY2;
     TableRow tableRow;
 
     double x,y,z;
@@ -38,6 +39,7 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
     //ArrayList<Double> puntosY3=new ArrayList<>();
     //el contador vera si hay la misma cantidad de puntos por eje para evitar problemas
     int contadorX=0,contadorY=0;
+    int contadorX2=0,contadorY2=0;
     int sample=2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,11 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
         tabla1.setColumnStretchable(0,true);
         tabla1.setColumnStretchable(1,true);
+
+        tabla2=(TableLayout)findViewById(R.id.tabla_2);
+
+        tabla2.setColumnStretchable(0,true);
+        tabla2.setColumnStretchable(1,true);
 
         /////////////////////////////////
         editV1=(EditText)findViewById(R.id.editV1);
@@ -160,11 +167,33 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
     public void AgregaY2(View view){
         try {
             puntosY2.add(Double.parseDouble(editI2.getText().toString()));
+            tableRow=new TableRow(this);
+            ptosX2=new TextView(this);
+            ptosY2=new TextView(this);
+
+            ptosX2.setText(String.valueOf(puntosX2.get(contadorX2)));
+            ptosX2.setTextSize(15);
+            ptosX2.setGravity(Gravity.CENTER);
+
+            ptosY2.setText(String.valueOf(puntosY2.get(contadorY2)));
+            ptosY2.setTextSize(15);
+            ptosY2.setGravity(Gravity.CENTER);
+
+            tableRow.addView(ptosX2);
+            tableRow.addView(ptosY2);
+
+            tabla2.addView(tableRow);
+
+            contadorX2+=1;
+            contadorY2+=1;
+            editV2.setText("");
+            editI2.setText("");
             //contadorY++;
             Toast.makeText(getApplicationContext(), String.valueOf(puntosY2.size())+"° punto añadido", Toast.LENGTH_SHORT).show();
 
         }catch (Exception e1){
-
+            e1.printStackTrace();
+            Log.e("APP", e1.toString());
         }
     }
 
@@ -179,14 +208,17 @@ public class DatosExperimentalesActivity extends AppCompatActivity {
 
             contadorX=0;
             contadorY=0;
+            contadorX2=0;
+            contadorY2=0;
             //puntosY3.clear();
             // puntosX3.clear();
             editV1.setText("");
             editI1.setText("");
+            editV2.setText("");
+            editI2.setText("");
 
             int childCount = tabla1.getChildCount();
-
-            // Remove all rows except the first one
+            tabla2.removeAllViews();
 
             tabla1.removeViews(0,childCount);
             Toast.makeText(getApplicationContext(), "Se han eliminado los parametros de la gráfica", Toast.LENGTH_SHORT).show();

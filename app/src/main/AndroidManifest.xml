@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DatosExperimentalesActivity"/>
+        <activity android:name=".DatosExperimentalesActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".MenuOhmActivity"/>
         <activity android:name=".AmperiosActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".GraficoActivity"/>
