@@ -29,32 +29,31 @@
 
 
         <TextView
-            android:layout_margin="16dp"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ley de ohm"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif"
             android:gravity="center"
+            android:text="Ley de ohm"
+            android:textColor="@color/colorPrimary"
             android:textSize="32sp"
-            android:fontFamily="serif-monospace"
-            android:textStyle="bold"
-            android:textColor="#2ea4da"
-            android:id="@+id/textView2"
-            />
+            android:textStyle="bold" />
 
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿Qué desea hallar?"
-            android:fontFamily="cursive"
-            android:id="@+id/textView3"
-            android:gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="26dp"
-            android:textStyle="bold"
             android:layout_below="@+id/textView2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="¿Qué desea hallar?"
+            android:textColor="@color/colorAccent"
+            android:textSize="26dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,7 +116,7 @@
         android:gravity="center"
         android:id="@+id/btnexperimental"
         android:textSize="16sp"
-        android:background="#ab55bf2e"
+        android:background="@color/colorPrimaryDark"
         android:layout_marginTop="66dp"
         android:drawablePadding="8dp"
         android:drawableLeft="@drawable/datos"

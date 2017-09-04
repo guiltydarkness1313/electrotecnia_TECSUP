@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/electrotecniaTECSUP.iml" filepath="$PROJECT_DIR$/electrotecniaTECSUP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/electrotecnia_TECSUP2.iml" filepath="$PROJECT_DIR$/electrotecnia_TECSUP2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/electrotecnia_TECSUP.iml" filepath="$PROJECT_DIR$/electrotecnia_TECSUP.iml" />
     </modules>
   </component>
 </project>

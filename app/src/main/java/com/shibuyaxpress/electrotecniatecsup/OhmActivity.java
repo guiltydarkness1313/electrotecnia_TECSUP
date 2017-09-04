@@ -12,10 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import static android.R.attr.dial;
-import static android.R.attr.tension;
 
 public class OhmActivity extends AppCompatActivity {
     public ImageView ohnio;
@@ -87,8 +83,15 @@ public class OhmActivity extends AppCompatActivity {
         final EditText amperio = (EditText) dialog.findViewById(R.id.amperiosVol);
         final EditText tension = (EditText) dialog.findViewById(R.id.voltiosVol);
         final EditText res = (EditText) dialog.findViewById(R.id.resVol);
+        final ImageView imgcloseamper = (ImageView) dialog.findViewById(R.id.btnclosetension);
         Button cal = (Button) dialog.findViewById(R.id.calVolt);
         Button bor = (Button) dialog.findViewById(R.id.borrarTension);
+        imgcloseamper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         bor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,15 +131,22 @@ public class OhmActivity extends AppCompatActivity {
         final EditText tensionAmper = (EditText) dialog.findViewById(R.id.tenAmper);
         final EditText resisAmper = (EditText) dialog.findViewById(R.id.resisAmper);
         final EditText resAmper = (EditText) dialog.findViewById(R.id.resAmper);
+        final ImageView imgcloseamper = (ImageView) dialog.findViewById(R.id.btncloseamper);
         Button calAmper = (Button) dialog.findViewById(R.id.calAmper);
         Button borAmper = (Button) dialog.findViewById(R.id.borrarAmper);
 
+        imgcloseamper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         borAmper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tensionAmper.setText(" ");
-                resisAmper.setText(" ");
-                resAmper.setText(" ");
+                tensionAmper.setText("");
+                resisAmper.setText("");
+                resAmper.setText("");
             }
         });
 
@@ -162,16 +172,20 @@ public class OhmActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.activity_custom_resistencia);
 
-
-
         dialog.setTitle("Resistencia");
 
        final EditText tensionResis = (EditText) dialog.findViewById(R.id.tenResistencia);
        final EditText amperiosResis = (EditText) dialog.findViewById(R.id.amperiosResistencia);
        final EditText resResistenci = (EditText) dialog.findViewById(R.id.resResistencia);
+       final ImageView imgclose = (ImageView) dialog.findViewById(R.id.btnclose);
         Button calResistencia = (Button) dialog.findViewById(R.id.calResis);
         Button borraResis = (Button) dialog.findViewById(R.id.borrarResis);
-
+        imgclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         borraResis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -180,6 +194,7 @@ public class OhmActivity extends AppCompatActivity {
                 resResistenci.setText(" ");
             }
         });
+
 
         calResistencia.setOnClickListener(new View.OnClickListener() {
             @Override
