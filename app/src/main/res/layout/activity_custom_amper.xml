@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textColor="#3c3d3d"
             android:textStyle="bold"
-            android:text="Cálculo de Amperios"
+            android:text="Cálculo de Intensidad"
             android:textSize="30sp"
             android:gravity="center"/>
 <LinearLayout
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_marginLeft="15dp">
 
         <Button
             android:id="@+id/calAmper"
@@ -96,7 +96,7 @@
             android:background="@drawable/bg_button_cal"
             android:drawableLeft="@drawable/equal"
             android:drawablePadding="8dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="#fff"
             android:textStyle="bold"
             android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:textColor="#fff"
-                android:textSize="22dp"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Borrar"/>

@@ -85,7 +85,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:layout_marginLeft="15dp"
+            >
 
             <Button
                 android:id="@+id/calResis"
@@ -98,7 +99,8 @@
                 android:drawablePadding="8dp"
                 android:textStyle="bold"
                 android:textColor="#fff"
-                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
                 />
             <Button
                 android:id="@+id/borrarResis"
@@ -108,7 +110,7 @@
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:textColor="#fff"
-                android:textSize="22dp"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Borrar"/>
