@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(SplashActivity.this,MenuOhmActivity.class);
+                Intent i=new Intent(SplashActivity.this,OhmActivity.class);
 
                 startActivity(i);
                 finish();

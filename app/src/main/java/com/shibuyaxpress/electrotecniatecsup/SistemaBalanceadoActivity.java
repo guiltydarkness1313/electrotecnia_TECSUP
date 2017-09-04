@@ -48,6 +48,7 @@ public class SistemaBalanceadoActivity extends AppCompatActivity {
 
         }
     }
+    //funcion del boton limpiar
     public void Limpiar(View view ){
         try {
             txtVoltios.setText("");

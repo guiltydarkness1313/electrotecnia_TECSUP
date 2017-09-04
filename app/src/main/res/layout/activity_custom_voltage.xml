@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#3c3d3d"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cálculo de la Tensión"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_margin="16dp"
+        android:id="@+id/voltiosVol"
+        android:drawableRight="@drawable/voltage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amperios"
+        android:drawablePadding="12dp"
+        android:inputType="number" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amperiosVol"
+        android:inputType="number"
+        android:hint="Resistencia"/>
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/calVolt"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_button_cal"
+            android:drawableLeft="@drawable/equal"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            />
+        <Button
+            android:id="@+id/borrarTension"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_button_cal"
+            android:drawableLeft="@drawable/eraser"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CE"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Resultado"
+        android:textStyle="normal"
+        android:textColor="#000"
+        android:inputType="number"
+        android:enabled="false"
+        android:drawableRight="@drawable/resistance"
+        android:id="@+id/resVol"/>
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
+</ScrollView>
